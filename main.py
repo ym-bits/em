@@ -122,3 +122,9 @@ def bmp280_checktemp(data):
     # Pressure offset calculations
 
     return cTemp
+
+data=bmp280_readdata(0x77)
+	p=bmp280_convert(data)
+	t=bmp280_checktemp(data)
+    print(p)
+    print(t)
